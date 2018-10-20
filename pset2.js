@@ -5,6 +5,16 @@
     @desc - takes all engative numbers and makes positive
     @example - removeNegatives([-3,-2,1,2,3,-4]); // [3,2,1,2,3,4]
 */
+const removeNegatives = (arr) => {
+    const nuArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        //arr[i] =
+        nuArr.push(Math.abs(arr[i]));    
+    }
+    return nuArr;
+}
+
+console.log(removeNegatives([-3,-2,1,2,3,-4])); // [3,2,1,2,3,4])
 
 /*
     @func findVal
