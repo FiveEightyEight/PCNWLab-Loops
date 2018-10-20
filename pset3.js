@@ -87,6 +87,23 @@ console.log(hasAtSymbol('foobar')); // false
                capitalize('Taq'); // 'Taq'
 */
 
+// problem 4
+
+const capitalize = (str) => {
+    let nuStr = "";
+    for(let i = 0; i < str.length; i++){
+        if(i === 0){
+      nuStr += str.charAt(i).toUpperCase();  
+       } else {
+        nuStr += str[i];
+        }
+    }
+    return nuStr;   
+}
+
+console.log(capitalize('taq')); // 'Taq'
+console.log(capitalize('Taq')); // 'Taq'
+
 /*
     @func isAllUpperCased
     @param {string} str
