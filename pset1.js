@@ -81,6 +81,18 @@ console.log(negateArr([1,2,3,4])); // [-1,-2,-3,-4])
     @desc - reverse an array
     @example - reverseArr([1,2,3,4]); // [4,3,2,1]
 */
+// problem 5
+
+const reverseArr = (arr) => {
+    //can be done with .reverse()
+    const nuArr = [];
+    for(let i =  arr.length-1; i >= 0 ; i--) {
+        nuArr.push(arr[i]);    
+    } 
+    return nuArr;
+}
+
+console.log(reverseArr([1,2,3,4])); // [4,3,2,1])
 
 /*
     @func negateBackwards
