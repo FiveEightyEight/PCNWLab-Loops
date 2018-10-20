@@ -112,8 +112,21 @@ console.log(doubleify([1,2,3,4])); // [1,1,2,2,3,3,4,4])
 
 /*
     @func findMax
-    @param {array}
+    @param {array} arr
     @returns {number}
     @desc - find largest number in array
     @example - findMax([1,2,3,99,4]); // 99 
 */
+// problem 6
+
+const findMax = (arr) => {
+    let largestVal = 0;
+    for(let i =  0; i < arr.length; i++) {
+        if(largestVal < arr[i]){
+            largestVal = arr[i];
+        }
+    } 
+    return largestVal;
+}
+
+console.log(findMax([1,2,3,99,4])); // 99 )
