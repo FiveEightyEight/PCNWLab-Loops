@@ -96,7 +96,19 @@ console.log(addSquares([1,2,3,4])); // [1,2,3,4,1,4,9,16]
     @desc - take each value of array, add same value right after
     @example - doubleify([1,2,3,4); // [1,1,2,2,3,3,4,4]
 */
+// problem 5
 
+const doubleify = (arr) => {
+    const nuArr = [];
+    for(let i =  0; i < arr.length; i++) {
+        for(let j = 0; j < 2; j++){
+            nuArr.push(arr[i]);
+        }
+    } 
+    return nuArr;
+}
+
+console.log(doubleify([1,2,3,4])); // [1,1,2,2,3,3,4,4])
 
 /*
     @func findMax
