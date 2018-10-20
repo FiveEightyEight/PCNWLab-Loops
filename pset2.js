@@ -56,7 +56,20 @@ console.log(findVal([1,2,3,4], 9)); // -1
         removeOdds([1,2,3,4]); // [2,4]
         removeOdds([1,"2",3,4]); // [4]
 */
+// problem 3
+ 
+const removeOdds = (arr) => {
+    const nuArr = [];
+    for(let i =  arr.length-1; i >= 0 ; i--) {
+        if(typeof arr[i] === 'number' && arr[i] % 2 === 0){
+            nuArr.push(arr[i]);  
+        }  
+    } 
+    return nuArr;
+}
 
+console.log(removeOdds([1,2,3,4])); // [2,4]
+console.log(removeOdds([1,"2",3,4])); // [4]
 /*
     @func addSquares
     @param {array} arr
