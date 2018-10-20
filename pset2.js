@@ -29,6 +29,21 @@ console.log(removeNegatives([-3,-2,1,2,3,-4])); // [3,2,1,2,3,4])
         findVal([1,2,3,4], 4); // 3
         findVal([1,2,3,4], 9); // -1
 */
+// problem 2
+
+const findVal = (arr, val = 0) => {
+    let index = -1;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === val){
+            index = i;
+        }
+    }
+    return index;
+}
+
+console.log(findVal([1,2,3,4], 1)); // 0
+console.log(findVal([1,2,3,4], 4)); // 3
+console.log(findVal([1,2,3,4], 9)); // -1
 
 /*
     @func removeOdds
