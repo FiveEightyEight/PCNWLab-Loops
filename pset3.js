@@ -113,7 +113,14 @@ console.log(capitalize('Taq')); // 'Taq'
     @example isAllUpperCased('TAQ'); // true
              isAllUpperCased('tAq'); // false
 */
+// problem 5
 
+const isAllUpperCased = (str) => {
+    if(str === str.toUpperCase()){
+        return true;
+    }
+    return false;
+}
 /*
     @func capitalizeEachWord
     @param {string} str
