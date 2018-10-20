@@ -64,7 +64,19 @@ console.log(addToMiddle([1,2,3,4], 0)); // [1,2,0,3,4])
     @example - hasAtSymbol('taq@karim.com'); // true
                hasAtSymbol('foobar'); // false
 */
+// problem 3
 
+const hasAtSymbol = (string) => {
+    for(let i =  0; i < string.length; i++){
+        if(string[i] === '@'){
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(hasAtSymbol('taq@karim.com')); // true
+console.log(hasAtSymbol('foobar')); // false
 /*
     @func capitalize
     @param {string} str
