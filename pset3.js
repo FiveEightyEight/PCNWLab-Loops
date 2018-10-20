@@ -9,6 +9,20 @@
                getMiddle([1,2,3,4]); // [2,3]
 */
 
+const getMiddle = (arr) => {
+    const nuArr = [];
+    if (arr.length % 2 === 0) {
+        nuArr.push(arr[Math.floor(arr.length/2)-1]);
+        nuArr.push(arr[Math.floor(arr.length/2)]);
+        
+        return nuArr
+    }
+    nuArr.push( arr[Math.ceil( arr.length/2 )] );
+    return nuArr;
+}
+console.log(getMiddle([1,2,3])); // [3]
+console.log(getMiddle([1,2,3,4])); // [2,3])
+
 /*
     @func addToMiddle
     @param {array} arr
