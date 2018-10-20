@@ -7,6 +7,16 @@
     @example - average([1,2,3,4]); // 2.5
 */
 
+const average = (arr) => {
+    let average = 0;
+    for(let i = 0; i < arr.length; i++) {
+        average += arr[i];
+    }
+
+    return average / arr.length;
+}
+
+console.log(average([1,2,3,4])); // 2.5
 /*
     @func squareEach
     @param {array} arr
