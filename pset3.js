@@ -34,6 +34,27 @@ console.log(getMiddle([1,2,3,4])); // [2,3])
     @example - addToMiddle([1,2,3], 0); // [1,2,0,3];
                addToMiddle([1,2,3,4], 0); // [1,2,0,3,4]
 */
+// problem 2
+
+const addToMiddle = (arr, element) => {
+    const nuArr = [];
+    for(let i =  0; i < arr.length; i++){
+        if (arr.length % 2 === 0 && i === Math.floor(arr.length/2)) {
+            // nuArr.push(arr[Math.floor(arr.length/2)])
+            nuArr.push(element);
+        }  
+        if (arr.length % 2 === 1 && i === Math.floor(arr.length/2)+1){
+            nuArr.push(element);
+        }
+        nuArr.push(arr[i]);
+        }
+        return nuArr;
+}
+
+console.log(addToMiddle([1,2,3], 0)); // [1,2,0,3];)
+
+
+console.log(addToMiddle([1,2,3,4], 0)); // [1,2,0,3,4])
 
 /*
     @func hasAtSymbol
