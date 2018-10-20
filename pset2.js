@@ -60,7 +60,7 @@ console.log(findVal([1,2,3,4], 9)); // -1
  
 const removeOdds = (arr) => {
     const nuArr = [];
-    for(let i =  arr.length-1; i >= 0 ; i--) {
+    for(let i =  0; i < arr.length; i++) {
         if(typeof arr[i] === 'number' && arr[i] % 2 === 0){
             nuArr.push(arr[i]);  
         }  
@@ -78,7 +78,17 @@ console.log(removeOdds([1,"2",3,4])); // [4]
     @example - 
         addSquares([1,2,3,4); // [1,2,3,4,1,4,9,16]
 */
+// problem 4
 
+const addSquares = (arr) => {
+    const nuArr = [];
+    for(let i =  0; i < arr.length; i++) {
+        nuArr.push(arr[i] ** 2);
+    } 
+    return nuArr;
+}
+
+console.log(addSquares([1,2,3,4])); // [1,2,3,4,1,4,9,16]
 /*
     @func doubleify
     @param {array} arr
