@@ -28,10 +28,10 @@ console.log(average([1,2,3,4])); // 2.5
 const squareEach = (arr) => {
     const nuArr = [];
     for(let i = 0; i < arr.length; i++) {
-        arr[i] = arr[i] ** 2;
-        // nuArr.push()
+        //arr[i] =
+        nuArr.push(arr[i] ** 2);    
     }
-    return arr;
+    return nuArr;
 }
 console.log(squareEach([1,2,3,4])); // [1,4,9,16]
 
@@ -48,7 +48,12 @@ console.log(squareEach([1,2,3,4])); // [1,4,9,16]
         // then find the averate of the array to the right
         averageSquare([1,2,3,4); // 7.5
 */
+// Problem 3
 
+const averageSquare = (arr) => {
+    return average(squareEach(arr));
+}
+console.log(averageSquare([1,2,3,4])); // 7.5
 /*
     @func negateArr
     @param {array} arr
