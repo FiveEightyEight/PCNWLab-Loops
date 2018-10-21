@@ -121,6 +121,9 @@ const isAllUpperCased = (str) => {
     }
     return false;
 }
+
+console.log(isAllUpperCased('TAQ')); // true
+console.log(isAllUpperCased('tAq')); // false
 /*
     @func capitalizeEachWord
     @param {string} str
@@ -128,9 +131,29 @@ const isAllUpperCased = (str) => {
     
     @desc - returns string with each WORD capitalized
     @example - capitalizeEachWord('the cow jumped over the fence')
-               // 'The Cow Jumped Over The Fence'
+               // 'The Cow Jumped Over
+                The Fence'
 */
+// problem 6
 
+const capitalizeEachWord = (str) => {
+    let nuStr = "";
+
+    for (let i = 0; i < str.length; i++){
+        if(i === 0){
+            nuStr += str.charAt(i).toUpperCase();
+        } else if (str.charAt(i) === " ") {
+            nuStr += str.charAt(i)
+            nuStr += str.charAt(i+1).toUpperCase();
+            i++;
+        } else {
+            nuStr += str.charAt(i)
+        }
+    }
+    return nuStr;
+}
+
+console.log(capitalizeEachWord('the cow jumped over the fence'));
 /*
     @func capitalizeEachWordWithExceptions
     @param {string} str
