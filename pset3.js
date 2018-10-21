@@ -167,6 +167,40 @@ console.log(capitalizeEachWord('the cow jumped over the fence'));
                )
                // 'The Cow and a Fox Went on the Trip'
 */
+//problem 7
+
+const capitalizeEachWordWithExceptions = (str, exceptions) => {
+    str = str.split(' ');
+    let nuStr = '';
+    
+    for (let i = 0; i < str.length; i++) {
+        console.log(`At index ${i}; Str: ${str[i]} Exception: ${exceptions[i]}`)
+        for(let j = 0; j < exceptions.length; j++){ 
+       if (str[i] === exceptions[j]){
+            nuStr += str[i];
+                if(i === str.length-1){
+                    break;
+                }
+            nuStr += " ";
+        } else {
+            str[i][0] = str[i][0].toUpperCase()
+            nuStr += str[i];
+            if(i === str.length-1){
+                break;
+            }
+            nuStr += " ";
+         }
+      }   
+    }
+    return nuStr;
+}
+
+console.log(capitalizeEachWordWithExceptions(
+    'the cow and a fox went on the trip', 
+    ['the', 'and', 'a', 'on']
+   ));
+   // 'The Cow and a Fox Went on the Trip'
+
 
 /*
     @func findAtMentions
