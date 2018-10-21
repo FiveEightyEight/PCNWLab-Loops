@@ -81,7 +81,7 @@ console.log(removeOdds([1,"2",3,4])); // [4]
 // problem 4
 
 const addSquares = (arr) => {
-    const nuArr = [];
+    const nuArr = [...arr];
     for(let i =  0; i < arr.length; i++) {
         nuArr.push(arr[i] ** 2);
     } 
