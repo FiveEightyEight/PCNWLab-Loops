@@ -88,7 +88,7 @@ const addSquares = (arr) => {
     return nuArr;
 }
 
-console.log(addSquares([1,2,3,4])); // [1,2,3,4,1,4,9,16]
+console.log(addSquares( [1,2,3,4] )); // [1,2,3,4,1,4,9,16]
 /*
     @func doubleify
     @param {array} arr
@@ -120,8 +120,9 @@ console.log(doubleify([1,2,3,4])); // [1,1,2,2,3,3,4,4])
 // problem 6
 
 const findMax = (arr) => {
-    let largestVal = 0;
-    for(let i =  0; i < arr.length; i++) {
+    // let largestVal = 0; // original code
+    let largestVal = arr[0];
+    for(let i =  1; i < arr.length; i++) {  // i now starts with a value of 1
         if(largestVal < arr[i]){
             largestVal = arr[i];
         }
@@ -130,3 +131,4 @@ const findMax = (arr) => {
 }
 
 console.log(findMax([1,2,3,99,4])); // 99 )
+console.log(findMax([1])); // 99 )
