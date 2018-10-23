@@ -7,16 +7,27 @@
     @example - average([1,2,3,4]); // 2.5
 */
 
-const average = (arr) => {
-    let average = 0;
-    for(let i = 0; i < arr.length; i++) {
-        average += arr[i];
-    }
+// nums +=nums;
+    // return nums /arr.length ;
 
-    return average / arr.length;
+let arr = [1,2,3,4];
+
+const arrAvg = (arr) => {
+    let sum = 0;
+    arr.forEach(element => {
+       sum += element; 
+    });
+    return sum / arr.length;
 }
 
-console.log(average([1,2,3,4])); // 2.5
+console.log(arrAvg(arr));
+
+
+// console.log(pset1Sum += stuff);
+// console.log(pset1Sum = pset1Sum / arr.length);
+
+
+// console.log(average1([1,2,3,4])); // 2.5
 /*
     @func squareEach
     @param {array} arr
@@ -25,15 +36,19 @@ console.log(average([1,2,3,4])); // 2.5
     @example - squareEach([1,2,3,4]); // [1,4,9,16]
 */
 // problem 2
-const squareEach = (arr) => {
-    const nuArr = [];
-    for(let i = 0; i < arr.length; i++) {
-        arr[i] = arr[i] ** 2;
-        // nuArr.push()
-    }
-    return arr;
+
+const squareArr = (arr) => {
+
+    return arr.map(element => {
+        return element ** 2;
+    })
 }
-console.log(squareEach([1,2,3,4])); // [1,4,9,16]
+
+console.log(squareArr(arr))
+
+//   arr[i] = arr[i] ** 2;
+//   return arr;
+// console.log(squareEach([1,2,3,4])); // [1,4,9,16]
 
 /*
     @func averageSquare
@@ -49,6 +64,11 @@ console.log(squareEach([1,2,3,4])); // [1,4,9,16]
         averageSquare([1,2,3,4); // 7.5
 */
 
+const avgSqrArr = (arr) => {
+    return arrAvg(squareArr(arr));
+}
+
+console.log(avgSqrArr(arr));
 /*
     @func negateArr
     @param {array} arr
@@ -58,6 +78,15 @@ console.log(squareEach([1,2,3,4])); // [1,4,9,16]
         negateArr([1,2,3,4]); // [-1,-2,-3,-4]
 */
 
+const negateArr = (arr) => {
+
+    return arr.map(element =>{
+        return element * -1;
+    })
+}
+
+console.log(negateArr(arr));
+
 /*
     @func reverseArr
     @param {array} arr
@@ -66,6 +95,13 @@ console.log(squareEach([1,2,3,4])); // [1,4,9,16]
     @example - reverseArr([1,2,3,4]); // [4,3,2,1]
 */
 
+const reverseArr = (arr) => {
+    return arr.map((element, i, arr)=> {
+        return arr[(arr.length - 1)-i]
+    })
+}
+
+console.log(reverseArr(arr))
 /*
     @func negateBackwards
     @param {array} arr
@@ -75,5 +111,8 @@ console.log(squareEach([1,2,3,4])); // [1,4,9,16]
         negateBackwards([1,2,3,4]); // [-4, -3, -2, -1]
 */
 
+const negateBackwards = (arr) => {
+return negateArr(reverseArr(arr));
+}
 
-
+console.log(negateBackwards(arr))
