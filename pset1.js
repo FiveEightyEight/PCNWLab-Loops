@@ -47,6 +47,18 @@ console.log(squareEach([1,2,3,4])); // [1,4,9,16]
         averageSquare([1,2,3,4); // 7.5
 */
 
+const averageSquare = (arr) => {
+    return arr.reduce( (acc, element) => {
+        acc.push(element ** 2)
+        return acc;
+    }, []).reduce( (acc, element) => {
+        acc += element
+        return acc;
+    }) / arr.length;
+}
+
+console.log(averageSquare([1,2,3,4])); // 7.5)
+
 /*
     @func negateArr
     @param {array} arr
