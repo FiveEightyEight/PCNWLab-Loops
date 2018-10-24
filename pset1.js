@@ -26,14 +26,12 @@ console.log(average([1,2,3,4])); // 2.5
 */
 // problem 2
 const squareEach = (arr) => {
-    const nuArr = [];
-    for(let i = 0; i < arr.length; i++) {
-        arr[i] = arr[i] ** 2;
-        // nuArr.push()
-    }
-    return arr;
+    return arr.reduce( (acc, element) => {
+       acc.push(element ** 2);
+       return acc;
+    },[])
 }
-// console.log(squareEach([1,2,3,4])); // [1,4,9,16]
+console.log(squareEach([1,2,3,4])); // [1,4,9,16]
 
 /*
     @func averageSquare
