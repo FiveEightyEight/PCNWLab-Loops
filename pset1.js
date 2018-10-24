@@ -7,13 +7,13 @@
     @example - average([1,2,3,4]); // 2.5
 */
 
-const average = (arr) => {
-    let average = 0;
-    for(let i = 0; i < arr.length; i++) {
-        average += arr[i];
-    }
 
-    return average / arr.length;
+const average = (arr) => {
+
+    return arr.reduce( (acc, element) => {
+        return acc += element
+    }) / arr.length;
+        
 }
 
 console.log(average([1,2,3,4])); // 2.5
@@ -33,7 +33,7 @@ const squareEach = (arr) => {
     }
     return arr;
 }
-console.log(squareEach([1,2,3,4])); // [1,4,9,16]
+// console.log(squareEach([1,2,3,4])); // [1,4,9,16]
 
 /*
     @func averageSquare
