@@ -68,6 +68,13 @@ console.log(averageSquare([1,2,3,4])); // 7.5)
         negateArr([1,2,3,4]); // [-1,-2,-3,-4]
 */
 
+const negateArr = (arr) => {
+    return arr.reduce((acc, element) => {
+        acc.push(element * -1)
+        return acc;
+    },[])
+}
+console.log(negateArr([1,2,3,4])); // [-1,-2,-3,-4]
 /*
     @func reverseArr
     @param {array} arr
