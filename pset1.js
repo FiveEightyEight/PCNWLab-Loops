@@ -83,6 +83,15 @@ console.log(negateArr([1,2,3,4])); // [-1,-2,-3,-4]
     @example - reverseArr([1,2,3,4]); // [4,3,2,1]
 */
 
+const reverseArr = (arr) => {
+    return arr.reduce((acc, element, i)=> {
+         acc.push( arr[(arr.length -1) - i ] );
+        return acc;
+    },[]) 
+}
+
+console.log(reverseArr([1,2,3,4])); // [4,3,2,1])
+
 /*
     @func negateBackwards
     @param {array} arr
@@ -92,5 +101,10 @@ console.log(negateArr([1,2,3,4])); // [-1,-2,-3,-4]
         negateBackwards([1,2,3,4]); // [-4, -3, -2, -1]
 */
 
+/*
+const negateBackwards = () => {
+    return .
+}
 
 
+*/
